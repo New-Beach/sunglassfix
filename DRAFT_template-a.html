@@ -1,0 +1,913 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" href="icon.png">
+	
+	<!-- Individual stylesheets for each module / should be combined and minified for production -->
+	<link rel="stylesheet" href="css/styles.css">
+
+	<meta name="theme-color" content="#14145A">
+</head>
+
+<body>
+	<div class="main-content-wrapper">
+		<!-- 
+		This is the site header that appears on every page. It is fixed to the top of the page on scroll and has a numver of functions tied to it which are explained in the master.js file. There is also a mobile header further down which repeats a few key modules, please keep this in mind when linking up functionality.
+		 -->
+		<header class="site-header">
+			<div class="top-header-bar">
+				<div class="flex-grid">
+					<div class="column-4 lg-column-hide"></div>
+					<div class="column-4 lg-column-6">
+						<div class="free-shipping">
+							<div class="small-text">
+								<span class="aqua">Free Shipping on all orders</span>
+								<img class="inline-icon button-svg" src="assets/images/plane-icon.svg" />
+							</div>
+						</div>
+					</div>
+					<div class="column-4 lg-column-6">
+						<div class="user-cart-settings-nav">
+							<!-- The language select element to select international site -->
+							<div class="language-select">
+								<div class="current-language">
+									<div class="flag-container">
+										<img src="assets/images/uk-flag.png" class="flag-image" />
+									</div>
+									<img class="select-arrow button-svg" src="assets/images/arrow-down.svg" />
+									<div class="language-dropdown">
+										<ul>
+											<li>
+												<a href="">
+													<div class="flag-container">
+														<img src="assets/images/australia-flag.png" class="flag-image" />
+													</div>
+													<span>English (AU)</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<div class="flag-container">
+														<img src="assets/images/uk-flag.png" class="flag-image" />
+													</div>
+													<span>English (UK)</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<div class="flag-container">
+														<img src="assets/images/usa-flag.png" class="flag-image" />
+													</div>
+													<span>English (US)</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<div class="flag-container">
+														<img src="assets/images/es-flag.png" class="flag-image" />
+													</div>
+													<span>Spanish</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- The currency select element to change currencies -->
+							<div class="currency-select">
+								<div class="current-currency">
+									<span class="currency">$AUD <img class="button-svg select-arrow" src="assets/images/arrow-down.svg" /></span>
+								</div>
+								<div class="currency-dropdown">
+									<ul>
+										<li><a href="">$AUS</a></li>
+										<li><a href="">$USD</a></li>
+										<li><a href="">£GBP</a></li>
+										<li><a href="">€EUR</a></li>
+									</ul>
+								</div>
+							</div>
+							<!-- This area is inteded for any other links of importance that don't fit in the main menu -->
+							<div class="page-links">
+								<ul>
+									<li><a href="#">Help & FAQs</a></li>
+								</ul>
+							</div>
+							<!-- These links and icons are tied to the ecommerce funtions i.e cart and account -->
+							<div class="user-commerce-links">
+								<div class="account-link">
+									<a href="">
+										<img src="assets/images/account-icon.svg" class="link-icon button-svg" />
+									</a>
+								</div>
+								<!-- Once this element is hovered over the cart-preview-hover element appears -->
+								<div class="cart-link-wrapper">
+									<div class="cart-link">
+										<a href="">
+											<img src="assets/images/cart-icon.svg" class="link-icon button-svg" />
+										</a>
+										<div class="cart-count-container">
+											<div class="cart-count">
+												<span>2</span>
+											</div>
+										</div>
+									</div>
+									<!-- This element is absolutely positioned and hidden until the user hovers over the cart-link -->
+									<section class="cart-preview-hover">
+										<div class="cart-preview">
+											<header class="cart-header">
+												<h5>Your Cart</h5>
+											</header>
+											<!-- For each item in the shopping cart, one of these cart-summary-item elements is generated -->
+											<div class="cart-summary-item">
+												<div class="product-row-top">
+													<div class="cart-product-image">
+														<img src="assets/images/quicksilver-sunnies.png" class="product-image" />
+													</div>
+													<div class="cart-product-description">
+														<h5>Sunglass Fix Replacement Lenses for Quiksilver Brigade | 56mm</h5>
+														<p class="small-text">- SFx Ultra Polarized<br />
+														- Ultimate Brown Hardcoat</p>
+													</div>
+													<div class="remove-product">
+														<img src="assets/images/close-red.svg" class="button-svg"/>
+													</div>
+												</div>
+												<div class="product-row-bottom">
+													<div class="product-amount">
+														<div class="reduce-amount">
+															<img src="assets/images/reduce-amount.svg" class="button-svg"/>
+														</div>
+														<div class="amount-display">
+															<span>1</span>
+														</div>
+														<div class="increase-amount">
+															<img src="assets/images/increase-amount.svg" class="button-svg"/>
+														</div>
+													</div>
+													<div class="product-price">
+														<span class="aqua">
+															<strong>$45.93</strong>
+														</span>
+													</div>
+												</div>
+											</div>
+											<div class="cart-summary-item">
+												<div class="product-row-top">
+													<div class="cart-product-image">
+														<img src="assets/images/coach-sunnies.png" class="product-image" />
+													</div>
+													<div class="cart-product-description">
+														<h5>Sunglass Fix Replacement Lenses for Coach HC7077 | 58mm</h5>
+														<p class="small-text">- SFx Ultra Polarized<br />
+														- Ultimate Brown Hardcoat</p>
+													</div>
+													<div class="remove-product">
+														<img src="assets/images/close-red.svg" class="button-svg"/>
+													</div>
+												</div>
+												<div class="product-row-bottom">
+													<div class="product-amount">
+														<div class="reduce-amount">
+															<img src="assets/images/reduce-amount.svg" class="button-svg"/>
+														</div>
+														<div class="amount-display">
+															<span>1</span>
+														</div>
+														<div class="increase-amount">
+															<img src="assets/images/increase-amount.svg" class="button-svg"/>
+														</div>
+													</div>
+													<div class="product-price">
+														<span class="aqua">
+															<strong>$45.93</strong>
+														</span>
+													</div>
+												</div>
+											</div>
+											<footer class="cart-footer">
+												<div class="rounded-button white-button"><a class="navy" href="#">View Cart</a></div>
+												<div class="rounded-button orange-button"><a href="#">Proceed to Checkout</a></div>
+											</footer>
+									</section>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="navigation-search-bar">
+				<div class="flex-grid">
+					<div class="column-5">
+						<div class="search-bar-container">
+							<!-- Clickign this element launches the search dialogue -->
+							<div class="search-button rounded-button activate-search-dialogue">
+							<!-- See master.js for notes on search dialogue buttons -->
+								<img src="assets/images/search-icon.svg" class="button-svg"/>
+								<span>Find your sunglass lenses</span>
+							</div>
+						</div>
+					</div>
+					<!-- The main logo for the site, there is some functionality tied to the colours in this SVG explained in master.js -->
+					<div class="column-2">
+						<div class="header-logo-container">
+							<img src="assets/images/sunglass-fix-logo.svg" class="button-svg header-logo" />
+						</div>
+					</div>
+					<div class="column-5">
+						<!-- the mobile menu button which is hidden on desktop -->
+						<div class="mobile-menu-bars">
+							<img src="assets/images/mobile-menu.svg" class="mobile-menu-open button-svg" />
+							<img src="assets/images/mobile-menu-close.svg" class="mobile-menu-close button-svg" />
+						</div>
+						<!-- This is the main navigation with top level links and sub menus -->
+						<div class="page-navigation-container">
+							<nav class="page-navigation">
+								<ul>
+									<li>
+										<a href="">Shop Lenses</a>
+										<img src="assets/images/arrow-down.svg" class="button-svg" />
+										<img src="assets/images/drodown-mobile.svg" class="mobile-menu-toggle" />
+										<ul class="sub-menu">
+											<li><a href="">Shop by Brand</a></li>
+											<li><a href="">Shop by Model</a></li>
+											<li><a href="">Custom made sunglass lenses</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="">How To</a>
+										<img src="assets/images/arrow-down.svg" class="button-svg" />
+										<img src="assets/images/drodown-mobile.svg" class="mobile-menu-toggle" />
+										<ul class="sub-menu">
+											<li><a href="">Install your lenses</a></li>
+											<li><a href="">Repair your sunglasses</a></li>
+											<li><a href="">Take care of your lenses</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="">About</a>
+										<img src="assets/images/arrow-down.svg" class="button-svg" />
+										<img src="assets/images/drodown-mobile.svg" class="mobile-menu-toggle" />
+										<ul class="sub-menu">
+											<li><a href="">Our Story</a></li>
+											<li><a href="">Sustainability Guarantee</a></li>
+											<li><a href="">Awards</a></li>
+											<li><a href="">Blog</a></li>
+											<li><a href="">Contact</a></li>
+										</ul>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- This is the mobile only menu which replaces a number of modules in the desktop version -->
+			<div class="mobile-menu-element">
+				<div class="mobile-menu-top-bar">
+					<!-- Mobile language select -->
+					<div class="mobile-language-select">
+						<div class="current-language">
+							<div class="flag-container">
+								<img src="assets/images/uk-flag.png" class="flag-image" />
+							</div>
+							<img class="select-arrow button-svg" src="assets/images/arrow-down.svg" />
+							<div class="language-dropdown">
+								<ul>
+									<li>
+										<a href="">
+											<div class="flag-container">
+												<img src="assets/images/australia-flag.png" class="flag-image" />
+											</div>
+											<span>English (AU)</span>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<div class="flag-container">
+												<img src="assets/images/uk-flag.png" class="flag-image" />
+											</div>
+											<span>English (UK)</span>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<div class="flag-container">
+												<img src="assets/images/usa-flag.png" class="flag-image" />
+											</div>
+											<span>English (US)</span>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<div class="flag-container">
+												<img src="assets/images/es-flag.png" class="flag-image" />
+											</div>
+											<span>Spanish</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- Mobile currency select -->
+					<div class="mobile-currency-select">
+						<div class="current-currency">
+							<span class="currency">$AUD <img class="button-svg select-arrow" src="assets/images/arrow-down.svg" /></span>
+						</div>
+						<div class="currency-dropdown">
+							<ul>
+								<li><a href="">$AUS</a></li>
+								<li><a href="">$USD</a></li>
+								<li><a href="">£GBP</a></li>
+								<li><a href="">€EUR</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- Mobile main page navigation select -->
+				<nav class="mobile-page-navigation">
+					<ul>
+						<li class="mobile-nav-item">
+							<div class="mobile-link-wrapper">
+								<a href="">Shop Lenses</a>
+								<div class="button-wrapper">
+									<img class="button-svg" src="assets/images/arrow-down.svg" />
+								</div>
+							</div>
+							<ul class="mobile-sub-menu">
+								<li>
+									<a href="">Shop By Brand</a>
+								</li>
+								<li>
+									<a href="">Shop By Model</a>
+								</li>
+								<li>
+									<a href="">Custom made sunglass lenses</a>
+								</li>
+							</ul>
+						</li>
+						<li class="mobile-nav-item">
+							<div class="mobile-link-wrapper">
+								<a href="">How to</a>
+								<div class="button-wrapper">
+									<img class="button-svg" src="assets/images/arrow-down.svg" />
+								</div>
+							</div>
+							<ul class="mobile-sub-menu">
+								<li>
+									<a href="">Install your lenses</a>
+								</li>
+								<li>
+									<a href="">Repair your sunglasses</a>
+								</li>
+								<li>
+									<a href="">Take care of your lenses</a>
+								</li>
+							</ul>
+						</li>
+						<li class="mobile-nav-item">
+							<div class="mobile-link-wrapper">
+								<a href="">About</a>
+								<div class="button-wrapper">
+									<img class="button-svg" src="assets/images/arrow-down.svg" />
+								</div>
+							</div>
+							<ul class="mobile-sub-menu">
+								<li>
+									<a href="">Our Story</a>
+								</li>
+								<li>
+									<a href="">Sustainability Guaratee</a>
+								</li>
+								<li>
+									<a href="">Awards</a>
+								</li>
+								<li>
+									<a href="">Blog</a>
+								</li>
+								<li>
+									<a href="">Contact</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<!-- These are some additional links from the desktop top bar -->
+					<ul class="additional-links">
+						<li><a href="">Your Cart</a></li>
+						<li><a href="">Your Account</a></li>
+						<li><a href="">Help & FAQs</a></li>
+					</ul>
+				</nav>
+				<!-- An additional search bar for mobile so users can still be prompted to search from the menu -->
+				<div class="fixed-mobile-search">
+					<div class="search-button activate-search-dialogue">
+						<img src="assets/images/search-icon.svg" class="button-svg"/>
+						<span>Find your sunglass lenses</span>
+					</div>
+				</div>
+			</div>
+			
+			<!-- This is the search dialogue including diagrams and other links, it should change dynamically based on the user input. At the moment there is an example of the results showing when you type in some input and hit enter. -->
+			<div class="search-dialogue">
+				<div class="search-dialogue-box">
+					<div class="search-bar-section">
+						<div class="flex-grid">
+							<div class="column-10">
+								<div class="search-bar">
+									<form class="main-header-search">
+										<button class="search-button" type="submit">
+											<img src="assets/images/search-icon.svg" class="button-svg" />
+										</button>
+										<!-- Type in here to change results display -->
+										<input type="text" class="main-header-search-input" placeholder="Enter your model number or lens brand" />
+									</form>
+								</div>
+							</div>
+							<div class="column-2">
+								<!-- Closes the dialogue -->
+								<div class="close-search-dialogue">
+									<img src="assets/images/close-red.svg" class="button-svg" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- This is the area where dynamic results are switched out - the three main ones are the default with the diagrams, a version with results showing, and a version showing that no results were found (not included here) -->
+					<div class="dynamic-results-area">
+						<div class="default-appearance">
+							<div class="flex-grid">
+								<div class="column-8 lg-column-12">
+									<div class="identify-model-diagram">
+										<h5>Quickly identify your model number:</h5>
+										<div class="diagram-container">
+											<img class="desktop-diagram" src="assets/images/desktop-diagram.svg" alt="How to identify your model number diagram"/>
+											<img class="mobile-diagram" src="assets/images/mobile-diagram.svg" alt="How to identify your model number diagram"/>
+										</div>
+									</div>
+								</div>
+								<div class="column-4 lg-column-12">
+									<div class="helper-links">
+										<h5>Can't see your model number?</h5>
+										<div class="rounded-button">
+											<a href="">How to identify your lenses</a>
+										</div>
+										<div class="rounded-button">
+											<a href="">Watch the helper video</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="display-results">
+							<div class="flex-grid">
+								<div class="column-12">
+									<div class="brand-keyword-found-section">
+										<span>Search by brand <a href="">Ray Ban</a></span>
+									</div>
+									<div class="results-list">
+										<ul>
+											<li>
+												<div class="result-row">
+													<div class="result-product-image">
+														<img src="assets/images/quicksilver-sunnies.png" class="result-image" />
+													</div>
+													<div class="result-product-description">
+														<h5>Sunglass Fix Replacement Lenses for Quiksilver Brigade | 56mm</h5>
+														<span class="aqua">$35.95</span>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="result-row">
+													<div class="result-product-image">
+														<img src="assets/images/products/product-1.png" class="result-image" />
+													</div>
+													<div class="result-product-description">
+														<h5>Sunglass Fix Replacement Lenses for Quiksilver Brigade | 56mm</h5>
+														<span class="aqua">$35.95</span>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="result-row">
+													<div class="result-product-image">
+														<img src="assets/images/products/product-2.png" class="result-image" />
+													</div>
+													<div class="result-product-description">
+														<h5>Sunglass Fix Replacement Lenses for Quiksilver Brigade | 56mm</h5>
+														<span class="aqua">$35.95</span>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="result-row">
+													<div class="result-product-image">
+														<img src="assets/images/products/product-3.png" class="result-image" />
+													</div>
+													<div class="result-product-description">
+														<h5>Sunglass Fix Replacement Lenses for Quiksilver Brigade | 56mm</h5>
+														<span class="aqua">$35.95</span>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="result-row">
+													<div class="result-product-image">
+														<img src="assets/images/products/product-4.png" class="result-image" />
+													</div>
+													<div class="result-product-description">
+														<h5>Sunglass Fix Replacement Lenses for Quiksilver Brigade | 56mm</h5>
+														<span class="aqua">$35.95</span>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<div class="dialogue-results-summary">
+										<span>Showing 5 of 1092 results found for "Ray Ban" <a href="">See All</a></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</header>
+		
+		<!-- This is the main image and heading section. -->
+		<section class="featured-page-header light-text no-top-padding background-color">
+			
+			<div class="background-image" style="background-image: url(assets/images/template-banner.jpg);"></div>
+
+			<div class="background-image-overlay"></div>
+
+			<div class="featured-heading-container">
+				<div class="text-container about-our-lenses">
+					<h2 class="vertical-heading">Ab<span class="circle accent">o</span>ut</h2>
+					<h2 class="horizontal-heading"><span class="circle accent">O</span>ur Lenses</h2>
+				</div>
+			</div>
+		</section>
+
+		<section class="generic-text-section">
+			<div class="flex-grid">
+				<div class="column-2 md-column-0"></div>
+				<div class="column-8 md-column-12">
+					<div class="content-container pad-2">
+						<h1>Every Detail in High Definition. Superlative optics engineered for Clarity.</h1>
+						<p>You didn’t just buy your sunglasses because they look great. You bought them because the world looked great through them. We want your world to always look that good; if not better.</p>
+						<p>At The Sunglass Fix we believe that clarity is king. That’s why we won’t compromise the optical excellence of our lenses and only employ the most optically precise materials, coatings and films.</p>
+					</div>
+				</div>
+				<div class="column-2 md-column-0"></div>
+			</div>
+		</section>
+
+		<section class="generic-four-column-section light-background">
+			<div class="flex-grid column-padding">
+				<div class="column-3 lg-column-6 md-column-12">
+					<div class="four-column-content-container content-container pad-h-1">
+						<img src="assets/images/four-column-image-a.jpg" />
+						<h3>Clarity</h3>
+						<p>Unlike most, we don’t just use regular polycarbonate for our Ultimate lenses. We use specially engineered optical Polyamide for a state of the art lens that combines the strength of plastic with the clarity of glass.</p>
+					</div>
+				</div>
+				<div class="column-3 lg-column-6 md-column-12">
+					<div class="four-column-content-container content-container pad-h-1">
+						<img src="assets/images/four-column-image-b.jpg" />
+						<h3>100% UV Blockout</h3>
+						<p>All our lenses come with guaranteed 100%UV block-out as standard. They are designed to withstand the rigours of the harsh Australian sun and will happily protect your eyes anywhere on our wonderful planet.</p>
+					</div>
+				</div>
+				<div class="column-3 lg-column-6 md-column-12">
+					<div class="four-column-content-container content-container pad-h-1">
+						<img src="assets/images/four-column-image-c.jpg" />
+						<h3>Polarisation Film</h3>
+						<p>All our lenses come with guaranteed 100%UV block-out as standard. They are designed to withstand the rigours of the harsh Australian sun and will happily protect your eyes anywhere on our wonderful planet.</p>
+					</div>
+				</div>
+				<div class="column-3 lg-column-6 md-column-12">
+					<div class="four-column-content-container content-container pad-h-1">
+						<img src="assets/images/four-column-image-d.jpg" />
+						<h3>Safety</h3>
+						<p>It’s not because we have to comply with American, Australian and European safety standards; it’s because your eyesight is as important to us as it is to you. Any tougher and our lenses would only be available standard issue in green.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="generic-video-section dark-section">
+			<div class="flex-grid">
+				<div class="column-2 md-column-0"></div>
+				<div class="column-8 md-column-12">
+					<div class="content-container pad-2">
+						
+						<h2>Precision Lens Engineering</h2>
+						<div class="video-content-container">
+							<video class="switch-video" controls list="nodownload nofullscreen" poster="assets/images/cover-quality-lens.jpg">
+								<source src="assets/videos/lens-quality-full.mp4" type="video/mp4">
+							</video>
+						</div>
+						
+					</div>
+				</div>
+				<div class="column-2 md-column-0"></div>
+			</div>
+		</section>
+
+		<section class="generic-text-section">
+			<div class="flex-grid">
+				<div class="column-2 md-column-0"></div>
+				<div class="column-8 md-column-12">
+					<div class="content-container pad-2">
+						<h2>Our Replacement Lens Range</h2>
+						<p>SFx Ultimate Polarised Lenses - One of the strongest, lightweight and durable lenses made. These lenses integrate a Japanese polarisation film with 99.9% efficacy rating making it one of the best glare fighters around. This may be the best lens you've ever owned.</p>
+
+						<p>SFx Ultimate Regular Lenses - Safe, durable, lightweight and ready for action. Lenses are coated with a protective layer that resist scratching, repels water and sweat. Crystal clear protection when only the best can do.</p>
+
+						<p>All Ultimate Lenses are made from a unique flexible polymer that has unbelievable optical clarity. In fact, labortory testing ranks our lenses up with optical glass but our lenses are 1/3 the weight, don't break, are safer and easier to install. While some polycarbonate lenses claim they've got great clarity, you'll never go back to a polycarbonate lens once you tried ours.</p>
+
+						<p>SFx Polycarbonate Polarised - A strong polycarbonate lens with hydrophobic external coating that makes cleaning a breeze. The lenses integrate a Japanese polarisation film with 99.9% efficacy. A strong seller and original at The Sunglass Fix.</p>
+
+						<p>SFx Regular Polycarbonate Lenses - Our polycarbonate lenses perform great. Polycarbonate lenses set the standard for safety because of their strength. While you give up a bit in optical clarity, they are still a great replacement lens option.</p>
+
+						<p>** Please note, we do NOT sell Glass lenses. We made this choice as we feel there are better technolgies available today such as our Ultimate lens line. Our Utlimate lenses are safer, about 1/3 the weight, much easier to install on your own, don't break, and still provide similar optical clarity and durabilty you'd expect from a glass lens.</p>
+					</div>
+				</div>
+				<div class="column-2 md-column-0"></div>
+			</div>
+		</section>
+
+		<section class="generic-text-section">
+			<div class="flex-grid">
+				<div class="column-2 md-column-0"></div>
+				<div class="column-8 md-column-12">
+					<div class="content-container pad-h-2 pad-b-2">
+						<h2>Quality Aspects of The Sunglass Fix's Replacement Lenses</h2>
+						<p>They Perform: All our lenses are crafted from optically superb Polyamide or Polycarbonate material and are coated to give glass like optical clarity. Our SFx lenses are 60% lighter than glass and are much stronger. All our SFx polarised lenses and silver mirrored lenses have a Super Hydrophobic coating that makes cleaning and repelling water during strenuous activities a breeze. They stay clear so you can perform.</p>
+
+						<p>Safety: All of our lenses meet AS/NZS 1067:2003 and all other known regional quality and safety standards. They provide 100% UV protection so you know your eyes are being protected. The SFx Polycarbonate (PC Polarised and High Clarity) lenses are made from the same primary material used in bulletproof glass and safety goggles making the lenses virtually shatter proof. Our Ultimate lenses are some of the safest lenses on the market. However, they fall just short of the Industrial Safety standards required for safety glasses. Please note, frames also play a big factor in safety glasses. Safety lenses in fragile frames can make good sunglasses but may not provide safety required at the workplace.</p>
+
+						<p>Durability: All our lenses have undergone industry standard steel wool abrasion testing and rank between 600-800% higher than competitors retailing for well over $200 in the shops. While polycarbonate lenses still lag behind glass lenses in scratch protection, they do not break and will last for years if taken care of.</p>
+
+						<p>Value for our customers and the Environment: We strive to offer the best products at a fair price in the most convenient manner. This allows our customers to get new lenses while saving money and helping the environment. With over a billion pairs of sunglasses being sold every year, it's time to change the way we live and reuse perfectly good sunglass frames.</p>
+
+						<p>Colours and Choices: Get the lenses you want, not the ones that came with your sunglasses. We can fit most sunglasses with a choice of 13 different lenses.</p>
+
+						<p>Example of our sunglass replacement lens color selection</p>
+					</div>
+				</div>
+				<div class="column-2 md-column-0"></div>
+			</div>
+		</section>
+		
+
+
+	</div> <!-- end main wrapper -->
+
+	<!-- This is the site footer which is common accross all pages -->
+	<footer class="site-footer">
+		<section class="social-media-footer-section">
+			<div class="flex-grid">
+				<div class="column-3 md-column-12">
+					<div class="social-media-intro">
+						<h3>Follow us</h3>
+						<p>Our social media channels are full of inspiration, useful information, promotions and special offers. Join our community today!</p>
+					</div>
+				</div>
+				<div class="column-3 md-column-4">
+					<div class="social-link-box third-social-box">
+						<div class="social-link-bg-image" style="background-image:url('assets/images/instagram-bg.png');"></div>
+						<div class="social-link-overlay">
+							<a target="_blank" href="https://www.instagram.com/sunglassfix/">
+								<img src="assets/images/instagram-white.svg" />
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="column-3 md-column-4">
+					<div class="social-link-box second-social-box">
+						<div class="social-link-bg-image" style="background-image:url('assets/images/facebook-bg.png');"></div>
+						<div class="social-link-overlay">
+							<a target="_blank" href="https://www.facebook.com/thesunglassfix/">
+								<img src="assets/images/facebook-white.svg" />
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="column-3 md-column-4">
+					<div class="social-link-box third-social-box">
+						<div class="social-link-bg-image" style="background-image:url('assets/images/youtube-bg.png');"></div>
+						<div class="social-link-overlay">
+							<a target="_blank" href="https://www.youtube.com/user/thesunglassfix">
+								<img src="assets/images/youtube-white.svg" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="contact-section">
+			<div class="flex-grid">
+				<div class="column-6 md-column-12 lg-column-8">
+					<div class="contact-details">
+						<h3>Contact Sunglass Fix</h3>
+						<div class="contact-items">
+							<div class="contact-phone">
+								<img src="assets/images/footer-icons/phone.svg" />
+								<p><a href="tel: 1800 786 349">1800 786 349</a></p>
+							</div>
+							<div class="contact-mail">
+								<img src="assets/images/footer-icons/mail.svg" />
+								<p><a href="mailto:info@thesunglassfix.com.au">info@thesunglassfix.com.au</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="column-6 md-column-12 lg-column-4">
+					<div class="review-details">
+						<h3>Independent Reviews</h3>
+						<div class="review-items">
+							<a href="" class="review-link">
+								<img src="assets/images/footer-icons/facebook.svg" />
+							</a>
+							<a href="" class="review-link">
+								<img src="assets/images/footer-icons/google.svg" />
+							</a>
+							<a href="" class="review-link">
+								<img src="assets/images/footer-icons/product-review.svg" />
+							</a>
+							<a href="" class="review-link">
+								<img src="assets/images/footer-icons/yelp.svg" />
+							</a>
+							<a href="" class="review-link">
+								<img src="assets/images/footer-icons/trustpilot.svg" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="lower-footer">
+
+			<div class="flex-grid">
+				<div class="column-3 lg-column-6">
+					<div class="lower-footer-link-section">
+						<h4>The Sunglass Fix</h4>
+						<ul class="lower-footer-links">
+							<li>
+								<a href="">About Us</a>
+							</li>
+							<li>
+								<a href="">Awards</a>
+							</li>
+							<li>
+								<a href="">Brands</a>
+							</li>
+							<li>
+								<a href="">Reviews</a>
+							</li>
+							<li>
+								<a href="">Sitemap</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="column-3 lg-column-6">
+					<div class="lower-footer-link-section">
+						<h4>Customer Service</h4>
+						<ul class="lower-footer-links">
+							<li>
+								<a href="">Contact Us</a>
+							</li>
+							<li>
+								<a href="">My Account</a>
+							</li>
+							<li>
+								<a href="">Order History</a>
+							</li>
+							<li>
+								<a href="">Returns & Exchanges</a>
+							</li>
+							<li>
+								<a href="">Payment Options</a>
+							</li>
+							<li>
+								<a href="">Shipping Information</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="column-3 lg-column-6">
+					<div class="lower-footer-link-section">
+						<h4>Support</h4>
+						<ul class="lower-footer-links">
+							<li>
+								<a href="">FAQ's</a>
+							</li>
+							<li>
+								<a href="">Finding Model and Size</a>
+							</li>
+							<li>
+								<a href="">How to Install Lenses</a>
+							</li>
+							<li>
+								<a href="">Sunglass Repair Tips</a>
+							</li>
+							<li>
+								<a href="">Terms and Conditions</a>
+							</li>
+							<li>
+								<a href="">Our Privacy Policy</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="column-3 lg-column-6">
+					<div class="lower-footer-link-section">
+						<h4>Featured Brands</h4>
+						<ul class="lower-footer-links">
+							<li>
+								<a href="">Ray Ban</a>
+							</li>
+							<li>
+								<a href="">Oakley</a>
+							</li>
+							<li>
+								<a href="">Arnette</a>
+							</li>
+							<li>
+								<a href="">Maui Jim</a>
+							</li>
+							<li>
+								<a href="">Prada</a>
+							</li>
+							<li>
+								<a href="">Otis</a>
+							</li>
+							<li>
+								<a href="">Dragon</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</section>
+		<section class="footer-details">
+			<div class="flex-grid">
+				<div class="column-4 md-column-12 md-order-1">
+					<div class="footer-info-text">
+						<span>Copyright © 2006 - 2020 The Sunglass Fix PTY LTD</span>
+					</div>
+				</div>
+				<div class="column-4 md-column-12 md-order-0">
+					<div class="footer-logo">
+						<img src="assets/images/sunglass-fix-logo-white.svg" alt="Sunglass Fix Logo"/>
+					</div>
+				</div>
+				<div class="column-4 md-column-12 md-order-2">
+					<div class="footer-payment-logos">
+						<div class="footer-payment-icon">
+							<img src="assets/images/visa.svg" alt="Visa Accepted" />
+						</div>
+						<div class="footer-payment-icon">
+							<img src="assets/images/mastercard.svg" alt="Mastercard Accepted" />
+						</div>
+						<div class="footer-payment-icon">
+							<img src="assets/images/paypal.svg" alt="Paypal Accepted" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</footer>
+
+
+
+
+	<!-- Include jQuery -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+	
+	<!-- Include Slick Slider for Carousels -->
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+	<!-- Include Minifed Scripts -->
+	<script src="js/min/all.js"></script>
+	
+</body>
+
+</html>
